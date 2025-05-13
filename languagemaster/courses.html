@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses | LanguaMaster</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --gray: #6b7280;
+      --light-gray: #f9fafb;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: white;
+      color: #111827;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-left {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: #374151;
+    }
+
+    .auth-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid var(--primary);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .auth-buttons .login {
+      color: var(--primary);
+    }
+
+    .auth-buttons .signup {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .courses-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .course-card {
+      background-color: var(--light-gray);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .course-card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .course-meta {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .course-description {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .course-card button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: var(--light-gray);
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-left">LanguaMaster</div>
+    <nav class="nav-links">
+      <a href="index.html">Courses</a>
+      <a href="languagepage.html">Language</a>
+      <a href="culture.html">Culture</a>
+      <a href="#">Business</a>
+      <a href="#">Tech</a>
+      <a href="#">Creative</a>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login">Log in</button>
+      <button class="signup">Sign up</button>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Explore Our Language Courses</h2>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <h3>Spanish for Beginners</h3>
+        <div class="course-meta">Level: A1-A2 • 12 weeks</div>
+        <p class="course-description">Learn basic Spanish grammar, vocabulary, and speaking skills for everyday conversation.</p>
+        <button>Enroll Now</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Conversational French</h3>
+        <div class="course-meta">Level: B1-B2 • 8 weeks</div>
+        <p class="course-description">Practice real-world French conversations and get feedback from native speakers.</p>
+        <button>Enroll Now</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Mandarin Essentials</h3>
+        <div class="course-meta">Level: A1 • 10 weeks</div>
+        <p class="course-description">Master Mandarin pronunciation, tones, and key characters to start speaking confidently.</p>
+        <button>Enroll Now</button>
+      </div>
+
+      <div class="course-card">
+        <h3>German Grammar Pro</h3>
+        <div class="course-meta">Level: B2-C1 • 6 weeks</div>
+        <p class="course-description">Boost your fluency with deep dives into German cases, sentence structure, and idioms.</p>
+        <button>Enroll Now</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Korean Culture & Language</h3>
+        <div class="course-meta">Level: A2-B1 • 9 weeks</div>
+        <p class="course-description">Explore Korean language and culture through interactive lessons and real media.</p>
+        <button>Enroll Now</button>
+      </div>
+
+      <div class="course-card">
+        <h3>Arabic Conversation Bootcamp</h3>
+        <div class="course-meta">Level: A2 • 5 weeks</div>
+        <p class="course-description">Focus on everyday Arabic phrases, pronunciation, and regional dialects with live sessions.</p>
+        <button>Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <span>About</span><span>Careers</span><span>Press</span><span>Blog</span><span>Support</span>
+      <span>Terms</span><span>Privacy</span><span>Accessibility</span>
+    </div>
+    <p>&copy; 2025 LanguaMaster</p>
+  </footer>
+
+</body>
+</html>

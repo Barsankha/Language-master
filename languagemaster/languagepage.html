@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Selector</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: url('assets/flag.jpg') center/cover no-repeat;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: -1rem;
+    }
+
+    .search-container input {
+      padding: 0.75rem;
+      width: 300px;
+      max-width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    .search-container button {
+      padding: 0.75rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    .languages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .language-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .language-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .language-card img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    .language-card p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .language-card span {
+      font-weight: bold;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Acme Co.</div>
+    <nav>
+      <a href="#">Products</a>
+      <a href="#">Solutions</a>
+      <a href="#">Resources</a>
+      <a href="#">Pricing</a>
+      <a href="#">Company</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Connect with the world</h1>
+    <p>Choose from over 100 languages to translate your app interface, help center, and more.</p>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a language" />
+      <button onclick="filterLanguages()">Filter</button>
+    </div>
+  </section>
+
+  <section class="languages" id="languageGrid">
+    <!-- Sample languages -->
+    <div class="language-card" data-lang="Japanese">
+      <img src="https://flagcdn.com/jp.svg" alt="Japanese flag" />
+      <span>日本語</span>
+      <p>Japanese</p>
+    </div>
+    <div class="language-card" data-lang="German">
+      <img src="https://flagcdn.com/de.svg" alt="German flag" />
+      <span>Deutsch</span>
+      <p>German</p>
+    </div>
+    <div class="language-card" data-lang="Chinese">
+      <img src="https://flagcdn.com/cn.svg" alt="Chinese flag" />
+      <span>中文</span>
+      <p>Chinese</p>
+    </div>
+    <!-- Add more cards as needed -->
+  </section>
+
+  <script>
+    function filterLanguages() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.language-card');
+
+      cards.forEach(card => {
+        const lang = card.getAttribute('data-lang').toLowerCase();
+        card.style.display = lang.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

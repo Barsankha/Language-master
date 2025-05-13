@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LanguaMaster</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --gray: #6b7280;
+      --light-gray: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+      color: #111827;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-left {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: #374151;
+    }
+
+    .auth-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid var(--primary);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .auth-buttons .login {
+      color: var(--primary);
+    }
+
+    .auth-buttons .signup {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .hero {
+      background: url('assets/laptop.jpg') center/cover no-repeat;
+      padding: 5rem 1rem;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .search-box input {
+      padding: 0.75rem;
+      border: none;
+      width: 250px;
+      border-radius: 6px 0 0 6px;
+    }
+
+    .search-box button {
+      padding: 0.75rem 1rem;
+      border: none;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      text-align: center;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+
+    .features {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .feature-card {
+      background-color: var(--light-gray);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .feature-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials {
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+    }
+
+    .testimonial h4 {
+      margin-bottom: 0.2rem;
+    }
+
+    .stars {
+      color: gold;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: var(--light-gray);
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer .socials {
+      margin-top: 1rem;
+    }
+
+    footer .socials i {
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-left">LanguaMaster</div>
+    <nav class="nav-links">
+      <a href="courses.html">Courses</a>
+      <a href="languagepage.html">Language</a>
+      <a href="culture.html">Culture</a>
+      <a href="#">Business</a>
+      <a href="#">Tech</a>
+      <a href="#">Creative</a>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login">Log in</button>
+      <button class="signup">Sign up</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Learn a language. Practice with natives. Get fluent faster.</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Which language are you learning?">
+      <button>Find a tutor</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why LanguaMaster</h2>
+    <p>We help you learn languages faster, so you can speak confidently and make your mark on the world.</p>
+
+    <div class="features">
+      <div class="feature-card">
+        <img src="assets/new-year-background.jpg" alt="Practice">
+        <h3>Conversational practice</h3>
+        <p>Practice speaking with a native speaker or other learners. Get instant feedback on pronunciation, grammar, and vocabulary.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/return.jpg" alt="Feedback">
+        <h3>Instant feedback</h3>
+        <p>Our AI analyzes your speech and provides instant feedback on pronunciation, grammar, and vocabulary.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/strategy.jpg" alt="Learning">
+        <h3>Personalized learning</h3>
+        <p>Set your own pace and focus on topics that matter to you. Lessons are tailored to your learning goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <h2>What our students say</h2>
+
+    <div class="testimonial">
+      <h4>Diana M. <small>– July 2023</small></h4>
+      <div class="stars">★★★★★</div>
+      <p>I’ve been using LanguaMaster for a few months now and I’m really impressed. The app is easy to use and lessons are fun and engaging. I love that I can practice with real people and get instant feedback!</p>
+    </div>
+
+    <div class="testimonial">
+      <h4>Hugo L. <small>– June 2023</small></h4>
+      <div class="stars">★★★★★</div>
+      <p>I’m learning Spanish and loving it. The lessons are interactive and the tutors are helpful. It’s really improved my conversational skills. Definitely worth the investment!</p>
+    </div>
+
+    <div class="testimonial">
+      <h4>Kendra S. <small>– June 2023</small></h4>
+      <div class="stars">★★★★★</div>
+      <p>I use LanguaMaster for French and it’s been a game changer. The app is well designed and effective. It helped me build confidence and fluency!</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <span>About</span><span>Careers</span><span>Press</span><span>Blog</span><span>Support</span>
+      <span>Affiliates</span><span>Terms</span><span>Privacy</span><span>Accessibility</span>
+    </div>
+    <div class="socials">
+      <i>🐦</i><i>📘</i><i>📸</i><i>▶️</i>
+    </div>
+    <p>&copy; 2025 LanguaMaster</p>
+  </footer>
+
+</body>
+</html>
